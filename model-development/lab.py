@@ -62,14 +62,14 @@ height = 10
 plt.figure(figsize=(width, height))
 sns.regplot(x='highway-L/100km', y='price', data=df)
 print(plt.ylim(0,))
-plt.savefig("./model_development/linear-regression-highway.png")
+plt.savefig("./model-development/linear-regression-highway.png")
 
 plt.clf()
 
 plt.figure(figsize=(width, height))
 sns.regplot(x='peak-rpm', y='price', data=df)
 print(plt.ylim(0,))
-plt.savefig("./model_development/linear-regression-peak.png")
+plt.savefig("./model-development/linear-regression-peak.png")
 
 plt.clf()
 
@@ -80,7 +80,7 @@ print(c)
 #Residual plot
 plt.figure(figsize=(width, height))
 sns.residplot(df['highway-L/100km'], df['price'])
-plt.savefig("./model_development/residual-highway.png")
+plt.savefig("./model-development/residual-highway.png")
 
 plt.clf()
 
@@ -95,7 +95,7 @@ sns.distplot(Y_hat, hist=False, label='Fitted values', ax=ax1)
 plt.title('Actual vs Fitted values for Price')
 plt.xlabel('Price(in dollars)')
 plt.ylabel('Proportion of Cars')
-plt.savefig("./model_development/distribution.png")
+plt.savefig("./model-development/distribution.png")
 
 plt.clf()
 
@@ -118,7 +118,7 @@ def PlotPolly(model, independent_variable, dependent_variable, Name):
     plt.xlabel(Name)
     plt.ylabel('Price of Cars')
 
-    plt.savefig("./model_development/polly_" + Name + ".png")
+    plt.savefig("./model-development/polly_" + Name + ".png")
     plt.clf()
 
 
@@ -198,7 +198,7 @@ yhat = lm.predict(new_input)
 print(yhat[0:5])
 
 plt.plot(new_input, yhat)
-plt.savefig("./model_development/prediction.png")
+plt.savefig("./model-development/prediction.png")
 plt.clf()
 
 
